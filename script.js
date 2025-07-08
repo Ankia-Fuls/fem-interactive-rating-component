@@ -4,7 +4,6 @@ let chosenValue = 0;
 
 const selectButton = (id) => {
     chosenValue = id.slice(-1);
-    document.getElementById(`${id}`).focus();
 
     for (let i = 1; i < 6; i++) {
         if (i != chosenValue) {
