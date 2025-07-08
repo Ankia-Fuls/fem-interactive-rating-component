@@ -168,4 +168,39 @@ button[type="submit"]:hover {
     }
 }
 
-@media only screen and (min-width: 25rem) {}
+@media only screen and (min-width: 25rem) {
+    .card {
+        gap: 1rem;
+        aspect-ratio: 1/1.01;
+        margin: 13.54% auto 12%;
+        padding: 2.1875rem 2.0625rem 0;
+        border-radius: 1.875rem;
+    }
+
+    #default img {
+        width: 3.125rem;
+        height: 3.125rem;
+        padding: 1.0625rem;
+    }
+
+    #default h1 {
+        padding-top: 1.125rem;
+    }
+
+    #default p {
+        width: 90%;
+        font-size: 0.9rem;
+        padding-bottom: 0.5625rem;
+    }
+
+    .rating-buttons button {
+        width: 72.5%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        aspect-ratio: 7.67/1;
+        font-size: 0.9375rem;
+        margin-top: 0.75rem;
+    }
+}
