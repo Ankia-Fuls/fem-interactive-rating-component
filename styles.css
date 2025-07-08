@@ -38,6 +38,10 @@ body {
     color: var(--orange-500);
 }
 
+.hidden {
+    display: none !important;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -97,7 +101,8 @@ body {
     cursor: pointer;
 }
 
-.rating-buttons button:active {
+.rating-buttons button:active,
+.rating-buttons button:focus {
     background-color: var(--white);
     color: var(--grey-900);
     cursor: pointer;
