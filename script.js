@@ -8,7 +8,13 @@ const selectButton = (id) => {
 }
 
 submitButton.addEventListener("click", () => {
-    document.getElementById("default").classList.add('hidden');
-    document.getElementById("thank-you").classList.remove('hidden');
-    document.getElementById("rating-chosen").innerText = chosenValue;
+    if (chosenValue != 0) {
+        document.getElementById("default").classList.add('hidden');
+        document.getElementById("thank-you").classList.remove('hidden');
+        document.getElementById("rating-chosen").innerText = chosenValue;
+    }
+    else {
+        alert("Please select a value first!");
+    }
+
 })
