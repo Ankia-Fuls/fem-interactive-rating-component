@@ -82,7 +82,7 @@ body {
     /* gap: 0.3125rem; */
 }
 
-.rating-buttons button {
+.rating-buttons input {
     width: 76.5%;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -95,14 +95,14 @@ body {
     place-self: center;
 }
 
-.rating-buttons button:hover {
+.rating-buttons input:hover,
+.rating-buttons input:focus {
     background-color: var(--orange-500);
     color: var(--grey-900);
     cursor: pointer;
 }
 
-.rating-buttons button:active,
-.rating-buttons button:focus {
+.rating-buttons input[aria-pressed="true"] {
     background-color: var(--white);
     color: var(--grey-900);
     cursor: pointer;
@@ -120,9 +120,11 @@ button[type="submit"] {
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
     font-family: "Overpass", sans-serif;
+    margin-top: 1.25rem;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+button[type="submit"]:focus {
     background-color: var(--white);
     color: var(--grey-900);
     cursor: pointer;
@@ -201,7 +203,7 @@ button[type="submit"]:hover {
         width: 100%;
         aspect-ratio: 7.67/1;
         font-size: 0.9375rem;
-        margin-top: 0.75rem;
+        margin-top: 1.75rem;
     }
 
     #thank-you img {
