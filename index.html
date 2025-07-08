@@ -21,23 +21,24 @@
       <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
         offering!</p>
       <div class="rating-buttons">
-        <button type="button" class="rating">1</button>
-        <button type="button" class="rating">2</button>
-        <button type="button" class="rating">3</button>
-        <button type="button" class="rating">4</button>
-        <button type="button" class="rating">5</button>
+        <button type="button" id="button-1" class="rating" onclick="selectButton(this.id)">1</button>
+        <button type="button" id="button-2" class="rating" onclick="selectButton(this.id)">2</button>
+        <button type="button" id="button-3" class="rating" onclick="selectButton(this.id)">3</button>
+        <button type="button" id="button-4" class="rating" onclick="selectButton(this.id)">4</button>
+        <button type="button" id="button-5" class="rating" onclick="selectButton(this.id)">5</button>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" id="submit">Submit</button>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div id="thank-you" class="card">
+    <div id="thank-you" class="card" style="display: none;">
       <img src="./images/illustration-thank-you.svg"
         alt="An icon depicting a transaction on a grey phone. There is an orange credit card on the left and an orange circle on the right of the phone" />
-      <p>You selected <span id="rating-chosen"></span> out of 5</p>
+      <p class="selected-text">You selected <span id="rating-chosen">4</span> out of 5</p>
       <h1>Thank you!</h1>
-      <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+      <p class="thank-you-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t
+        hesitate to get in
         touch!</p>
     </div>
     <!-- Thank you state end -->

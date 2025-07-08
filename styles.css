@@ -3,11 +3,14 @@
 :root {
     --attribution-link: hsl(228, 45%, 44%);
     --orange-500: hsl(25, 97%, 53%);
+    --orange-500-2: hsla(25, 97%, 53%, 0.8);
     --white: hsl(0, 100%, 100%);
     --grey-500: hsl(217, 12%, 63%);
     --grey-500-2: hsla(217, 12%, 63%, 0.1);
     --grey-900: hsl(213, 19%, 18%);
     --grey-950: hsl(216, 12%, 8%);
+    --gradient-dark: hsla(215, 27%, 12%, 0.7);
+    --gradient-light: hsla(212, 18%, 17%, 0.7);
 }
 
 *,
@@ -26,14 +29,24 @@ body {
     padding: 1.565rem;
 }
 
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--orange-500);
+}
+
 .card {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     max-width: 25.6875rem;
+    aspect-ratio: 1/1.108;
     margin: 9.6875rem auto 9.5rem;
-    padding: 1.375rem 1.375rem 2.0625rem;
-    background-color: var(--grey-900);
+    padding: 1.375rem 1.375rem;
+    background: linear-gradient(180deg, var(--gradient-light), var(--gradient-dark));
     border-radius: 1.5625rem;
 }
 
@@ -110,16 +123,36 @@ button[type="submit"]:hover {
     cursor: pointer;
 }
 
-
 #thank-you {
-    display: none;
-}
-
-.attribution {
-    font-size: 0.6875rem;
+    /* display: none; */
     text-align: center;
 }
 
-.attribution a {
-    color: var(--orange-500);
+#thank-you img {
+    width: 50%;
+    margin: 0.625rem auto 0;
+}
+
+#thank-you h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0.625rem;
+}
+
+.selected-text {
+    color: var(--orange-500-2);
+    font-weight: 400;
+    background-color: var(--grey-500-2);
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    padding: 0.625rem 0;
+    border: none;
+    border-radius: 1.875rem;
+}
+
+.thank-you-text {
+    color: var(--grey-500);
+    font-size: 0.875rem;
+    line-height: 1.6;
 }
